@@ -6,6 +6,13 @@
       "configurations": [
             {
                   "type": "java",
+                  "name": "CodeLens (Launch) - decryption",
+                  "request": "launch",
+                  "mainClass": "Java.Base64Encryption.decryption",
+                  "projectName": "Cryptography--_68fb69c7"
+            },
+            {
+                  "type": "java",
                   "name": "CodeLens (Launch) - encryption",
                   "request": "launch",
                   "mainClass": "Java.Base64Encryption.encryption.encryption",
