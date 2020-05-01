@@ -1,0 +1,36 @@
+{
+      // Use IntelliSense to learn about possible attributes.
+      // Hover to view descriptions of existing attributes.
+      // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+      "version": "0.2.0",
+      "configurations": [
+            {
+                  "type": "java",
+                  "name": "CodeLens (Launch) - encryption",
+                  "request": "launch",
+                  "mainClass": "Java.Base64Encryption.encryption.encryption",
+                  "projectName": "Cryptography--_68fb69c7"
+            },
+            {
+                  "type": "java",
+                  "name": "CodeLens (Launch) - encryption",
+                  "request": "launch",
+                  "mainClass": "Java.Base64Encryption.encryption",
+                  "projectName": "Cryptography--_68fb69c7"
+            },
+            {
+                  "name": "Python: Current File",
+                  "type": "python",
+                  "request": "launch",
+                  "program": "${file}",
+                  "console": "integratedTerminal"
+            },
+            {
+                  "name": "Python: Current File -- external",
+                  "type": "python",
+                  "request": "launch",
+                  "program": "${file}",
+                  "console": "externalTerminal"
+            }
+      ]
+}
