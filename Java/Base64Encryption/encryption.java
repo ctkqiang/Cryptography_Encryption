@@ -1,4 +1,4 @@
-package Java.Base64Encryption.encryption;
+package Java.Base64Encryption;
 
 import java.util.Base64;
 import java.util.Scanner;
