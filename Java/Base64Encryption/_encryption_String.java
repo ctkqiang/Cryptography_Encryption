@@ -15,7 +15,7 @@ package Java.Base64Encryption;
 import java.util.Base64;
 import java.util.Scanner;
 
-public class encryption {
+public class _encryption_String {
       public static void main(final String[] args) {
             final Scanner userInput = new Scanner(System.in);
             final String _originalText, _encodedString;
