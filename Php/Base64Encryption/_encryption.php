@@ -20,7 +20,10 @@ if ($__userInputOption == "str"){
       $_encodedString = base64_encode($_input);
       echo "Original String: ".$_input."\n";
       echo "Encoded String: ".$_encodedString;
+} else if ($__userInputOption == "exit()") {
+      exit();
 } else if ($__userInputOption == "bin") {
+      echo "Please enter {binary} you want to encode: \n";
       $__userInputBinary = rtrim(fgets(STDIN));
       $__post_encryption = file_get_contents($__userInputBinary);
       $__encryptedData = base64_encode($__post_encryption);
