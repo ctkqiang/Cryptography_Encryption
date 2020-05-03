@@ -45,7 +45,7 @@ class __onStart {
       __decryption _decryption = new __decryption();
       _decryption.__decryption_Binary();
     } else if (_requestUserInput == "exit()"){
-      IO.exit(_exitRequest)
+      IO.exit(_exitRequest);
     } else {
       print("Please give a valid [Input]");
     }
