@@ -18,39 +18,47 @@ void main() {
   onStart.__requestUser();
 }
 
-class __onStart {
-  void __requestUser() {
-    String _requestUserInput;
-    // Request $user_input either a "string" or "binary_file"
-    print("Encrypt {string} or {file}? [input: \"str\" || \"bin\"]");
-    _requestUserInput = IO.stdin.readLineSync();
-    if (_requestUserInput == "str") {
-      __encryption stringEncryption = new __encryption();
-      stringEncryption._encryptionString();
-    } else if (_requestUserInput == "bin") {
-      __encryption binaryEncryption = new __encryption();
-      binaryEncryption._encryptionBinary();
-    } else {
-      print("Please give a valid [Input]");
-    }
-  }
-}
-
 class __encryption {
   void _encryptionString() {
     print("Please Enter {str} you want to encrypt:  ");
     String _requestUserStringInput = IO.stdin.readLineSync();
+    // get $userInput(utf-8) and encode:
     List _encodedText = utf8.encode(_requestUserStringInput);
+    // get $encodedString from $userinput for encryption:
     String _base64EncryptedString = base64.encode(_encodedText);
     print("Original Text: $_requestUserStringInput");
     print("Encrpted String: $_base64EncryptedString");
   }
 
   Future<void> _encryptionBinary() async {
+    int x = 0;
+    int y = 100;
     print("Please Enter {content} you want to encrypt:  ");
     String _requestUserFileInput = IO.stdin.readLineSync();
     List _binary = await new IO.File(_requestUserFileInput).readAsBytesSync();
     String _encodedFile = base64.encode(_binary);
-    print("Encoded Binary:  $_encodedFile");
+    print("Encoded Binary:  $_encodedFile".substring(x, y));
+  }
+}
+
+class __onStart {
+  int _exitRequest = 99;
+  void __requestUser() {
+    String _requestUserInput;
+    // Request $user_input either a "string" or "binary_file"
+    print("Encrypt {string} or {file}? [input: \"str\" || \"bin\", type \"exit()\" for quit the programme]");
+    _requestUserInput = IO.stdin.readLineSync();
+
+    if (_requestUserInput == "str") {
+      __encryption stringEncryption = new __encryption();
+      stringEncryption._encryptionString();
+    } else if (_requestUserInput == "bin") {
+      __encryption binaryEncryption = new __encryption();
+      binaryEncryption._encryptionBinary();
+    } else if (_requestUserInput == "exit()") {
+      IO.exit(_exitRequest);
+    } else {
+      print("Please give a valid [Input]");
+    }
   }
 }
